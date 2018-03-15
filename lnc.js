@@ -22,13 +22,31 @@
  *  // returns { c: 1, e: 2, r: 1, s: 1 }
  */
 function charFreq(sentence) {
+    // var count = {};
+    // sentence.split('').filter(function(s) {
+    //     return s.match(/[a-z]/i);
+    // }).forEach(function(s){
+    //     s = s.toLocaleLowerCase();
+    //     count[s] = count[s] ? count[s] +1 : 1;;
+    // });
+    // return Array.from(Object.keys(count),function(n) {
+    //     return [n, count[n]];
+    // }).sort(function (a, b) {
+    //     // return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0;
+    //     return count;
+
+    // });
     var count = {};
-    sentence.split('').forEach(function (s) {
-        count[s] = count [s] ? count[s] + 1 : 1;
-        
+    sentence.split('').filter(function (sentence) {
+        return sentence.match(/[a-z]/i);
+    }).forEach(function (sentence) {
+        sentence = sentence.toLocaleLowerCase();
+        count[sentence] = count[sentence] ? count[sentence] + 1 : 1;
     });
     return count;
 }
+
+
 
 
 
