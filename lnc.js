@@ -1,4 +1,3 @@
-
 //--------------------------------------------------------------------------------------------------
 //
 // Using vanilla JavaScript only (no libraries), write code in the existing function bodies in this
@@ -23,8 +22,19 @@
  *  // returns { c: 1, e: 2, r: 1, s: 1 }
  */
 function charFreq(sentence) {
-    // Your code here
-}
+    var freq = {};
+    for (var i = 0; i <= sentence.length; i++) {
+        var char = sentence.charAt(i);
+        if (freq[char]) {
+            freq[char]++;
+        } else {
+            freq[char] = 1;
+        }
+    }
+    return freq;
+};
+charFreq();
+
 
 
 // 2. Longest Increasing Sequence.
@@ -82,5 +92,3 @@ function cookingSeries(start, end) {
 // ----------------------------------------------------------------------------
 // Test your functions below
 // ----------------------------------------------------------------------------
-hw.js
-Displaying hw.js.
