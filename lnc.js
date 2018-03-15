@@ -22,18 +22,13 @@
  *  // returns { c: 1, e: 2, r: 1, s: 1 }
  */
 function charFreq(sentence) {
-    var freq = {};
-    for (var i = 0; i <= sentence.length; i++) {
-        var char = sentence.charAt(i);
-        if (freq[char]) {
-            freq[char]++;
-        } else {
-            freq[char] = 1;
-        }
-    }
-    return freq;
-};
-charFreq();
+    var count = {};
+    sentence.split('').forEach(function (s) {
+        count[s] = count [s] ? count[s] + 1 : 1;
+        
+    });
+    return count;
+}
 
 
 
