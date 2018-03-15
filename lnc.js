@@ -44,7 +44,8 @@ function charFreq(sentence) {
         count[sentence] = count[sentence] ? count[sentence] + 1 : 1;
     });
     return count;
-}
+};
+
 
 
 
@@ -104,4 +105,12 @@ function cookingSeries(start, end) {
 
 // ----------------------------------------------------------------------------
 // Test your functions below
+
+
+// Challenge 1: 
+console.log(charFreq("my name %$#$##@343342234----ISSs KyYle"));
+// Challenge 2:
+
+// Challenge 3: 
+
 // ----------------------------------------------------------------------------
