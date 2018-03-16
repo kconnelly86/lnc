@@ -22,20 +22,7 @@
  *  // returns { c: 1, e: 2, r: 1, s: 1 }
  */
 function charFreq(sentence) {
-    // var count = {};
-    // sentence.split('').filter(function(s) {
-    //     return s.match(/[a-z]/i);
-    // }).forEach(function(s){
-    //     s = s.toLocaleLowerCase();
-    //     count[s] = count[s] ? count[s] +1 : 1;;
-    // });
-    // return Array.from(Object.keys(count),function(n) {
-    //     return [n, count[n]];
-    // }).sort(function (a, b) {
-    //     // return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0;
-    //     return count;
-
-    // });
+  
     var count = {};
     sentence.split('').filter(function (sentence) {
         return sentence.match(/[a-z]/i);
@@ -98,9 +85,31 @@ function longestIncrSequence(seq) {
  *  console.log(series);
  *  // returns [1, 2, 'Hanburger']
  */
+
 function cookingSeries(start, end) {
-    // Your code here
+    var result = [];
+    var start = start || 0;
+    var end = end || 0;
+
+    for (var i = start; i <= end; i++) {
+        if (i % 15 === 0) {
+            result.push("HanburgerWithCheese")
+                        
+        }
+        else if (i % 3 === 0) {
+            result.push("hanburger")
+                     
+        }
+        else if (i % 5 === 0) {
+            result.push("withCheese")
+                       
+        }else {
+            result.push(i);
+        }
+    }
+    return result;
 }
+
 
 
 // ----------------------------------------------------------------------------
@@ -110,7 +119,7 @@ function cookingSeries(start, end) {
 // Challenge 1: 
 console.log(charFreq("my name %$#$##@343342234----ISSs KyYle"));
 // Challenge 2:
-
+console.log(cookingSeries(1, 15));
 // Challenge 3: 
 
 // ----------------------------------------------------------------------------
