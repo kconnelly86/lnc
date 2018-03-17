@@ -56,15 +56,52 @@ function charFreq(sentence) {
  *  // returns []
  * @example
  *  longestIncrSequence([3, 4, 1, 2]);
- *  // return [3, 4]
+ *  // returns [3, 4]
  * @example
  *  longestIncrSequence([3, 0, 2, 2, 5, -43, -1, 0, 11, 9, 10]);
  *  // returns [-43, -1, 0, 11]
  *
  */
-function longestIncrSequence(seq) {
-    // Your code here
-}
+// function longestIncrSequence(seq) {
+// }
+// "use strict";
+
+
+
+    
+
+        // var sequence;
+
+        // this.setSequence = function (theSequence) {
+        //     sequence = theSequence;
+        // };
+
+        this.longestIncrSequence = function (sequence) {
+            var i, j, proposals = [], proposal, longestProposal;
+            for (i = 0; i < sequence.length; i += 1) {
+                proposal = [];
+                proposal.push(sequence[i]);
+                for (j = i + 1; j < sequence.length; j += 1) {
+                    if (sequence[j] > proposal[proposal.length - 1]) {
+                        proposal.push(sequence[j]);
+                    } else {
+                        proposals.push(proposal);
+                        break;
+                    }
+                }
+            }
+            longestProposal = proposals[0];
+            for (i = 1; i < proposals.length; i += 1) {
+                if (proposals[i].length > longestProposal.length) {
+                    longestProposal = proposals[i];
+                }
+            }
+            return longestProposal;
+        };
+
+   
+
+
 
 // 3. Hanburger Series.
 
@@ -119,7 +156,7 @@ function cookingSeries(start, end) {
 // Challenge 1: 
 console.log(charFreq("my name %$#$##@343342234----ISSs KyYle"));
 // Challenge 2:
-console.log(cookingSeries(1, 15));
-// Challenge 3: 
 
+// Challenge 3: 
+console.log(cookingSeries(1, 15));
 // ----------------------------------------------------------------------------
