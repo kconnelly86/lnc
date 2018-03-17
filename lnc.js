@@ -62,20 +62,10 @@ function charFreq(sentence) {
  *  // returns [-43, -1, 0, 11]
  *
  */
+
 // function longestIncrSequence(seq) {
-// }
-// "use strict";
-
-
-
     
-
-        // var sequence;
-
-        // this.setSequence = function (theSequence) {
-        //     sequence = theSequence;
-        // };
-
+// }
         this.longestIncrSequence = function (sequence) {
             var i, j, proposals = [], proposal, longestProposal;
             for (i = 0; i < sequence.length; i += 1) {
@@ -155,8 +145,11 @@ function cookingSeries(start, end) {
 
 // Challenge 1: 
 console.log(charFreq("my name %$#$##@343342234----ISSs KyYle"));
+console.log("--------------------------------------------------------------")
 // Challenge 2:
-
+console.log(longestIncrSequence([3, 0, 2, 2, 5, -43, -1, 0, 11, 9, 10]));
+console.log(longestIncrSequence([3, 4, 1, 2]));
+console.log("--------------------------------------------------------------")
 // Challenge 3: 
 console.log(cookingSeries(1, 15));
 // ----------------------------------------------------------------------------
