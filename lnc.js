@@ -33,11 +33,6 @@ function charFreq(sentence) {
     return count;
 };
 
-
-
-
-
-
 // 2. Longest Increasing Sequence.
 
 /**
@@ -67,7 +62,7 @@ function charFreq(sentence) {
     
 // }
         this.longestIncrSequence = function (sequence) {
-            var i, j, proposals = [], proposal, longestProposal;
+            var i, j, proposals = [], proposal, longestSeq;
             for (i = 0; i < sequence.length; i += 1) {
                 proposal = [];
                 proposal.push(sequence[i]);
@@ -80,18 +75,14 @@ function charFreq(sentence) {
                     }
                 }
             }
-            longestProposal = proposals[0];
+            longestSeq = proposals[0];
             for (i = 1; i < proposals.length; i += 1) {
-                if (proposals[i].length > longestProposal.length) {
-                    longestProposal = proposals[i];
+                if (proposals[i].length > longestSeq.length) {
+                    longestSeq = proposals[i];
                 }
             }
-            return longestProposal;
+            return longestSeq;
         };
-
-   
-
-
 
 // 3. Hanburger Series.
 
@@ -137,11 +128,8 @@ function cookingSeries(start, end) {
     return result;
 }
 
-
-
 // ----------------------------------------------------------------------------
 // Test your functions below
-
 
 // Challenge 1: 
 console.log(charFreq("my name %$#$##@343342234----ISSs KyYle"));
